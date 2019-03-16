@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"  href="@style.css">
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <div class="dropdown">
+     <button class="dropbtn">About
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#Overview">Overview</a>
+      <a href="#data">Data</a>
+      <a href="#future">Future Scope</a>
+    </div>
+  </div> 
+  <a href="@2.htm">Visualization</a>
+  <a href="@3.htm">Crime Panel</a>
+  
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img2.jpg" class="img2">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img3.jpg" class="img2">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img.jpeg" class="img2">
+  
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+
+
+<div>
+  <nav>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data">Data</a></li>
+      <li><a href="#future">Future Scope</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div style="padding-left:16px">
+  <h2></h2>
+  <p></p>
+  <p></p>
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+<div id="Overview" class="intro">
+  <p class="text">In India, the crime rates have seen a spike in recent times. These crimes have different statistical trends and it changes with change in time. Recognizing the patterns of criminal activity of a place is paramount in order to prevent it. Law enforcement agencies can work effectively and respond faster if they have better knowledge about crime patterns in different geological points of a city. 
+ The aim of this project is to use machine learning techniques to classify a criminal incident by type, depending on its occurrence at a given time and location on the basis of past data analysis. We seek to develop a web portal that will present trends and characteristics of crime, crime rates and crime control techniques.
+Our main lines of idea is to develop a platform that will provide the following benefits- </p>
+<div class="list"><ul><li> The police force could allocate more resources to the predicted high-crime area in order to preempt criminal activity</li>
+<li> Citizens would be safer by knowing what parts of a city they should avoid.</li>
+</ul></div>
+</div>
+<div id="data" class="intro">
+  <h1 class="heading">Data sets</h1>
+  <p>This dataset contains incidents derived from SFPD Crime Incident Reporting system. The data ranges from 1/1/2003 to 5/13/2015.</p>
+  <img src="Screen Shot 2015-05-28 at 5.23.48 PM.png" class="img" />
+  <h1 class="heading">Data Fields</h1>
+  <p><ul>
+    <li><b>Dates</b> - timestamp of the crime incident</li>
+    <li><b>Category</b> - category of the crime incident (only in train.csv). This is the target variable you are going to predict.</li>
+    <li><b>Descript</b>- detailed description of the crime incident (only in train.csv)</li>
+    <li><b>DayOfWeek</b> - the day of the week</li>
+    <li><b>PdDistrict</b>- name of the Police Department District</li>
+    <li><b>Resolution</b> - how the crime incident was resolved (only in train.csv)</li>
+    <li><b>Address</b> - the approximate street address of the crime incident</li> 
+    <li><b>X</b> - Longitude</li>
+    <li><b>Y</b> - Latitude</li>
+</div>
+<div id="future" class="intro">
+  <h1 class="heading">Future Scope</h1>
+  <p class="text">In the proposed system, we are introducing the application which will predict the crime that criminals can do in the future. This prediction is based on attributes like criminal record, education, occupation, friend circle, family background and other various factors. Along with the present scope of our project, which is prediction of the crime an individual criminal is likely to commit, we can also predict the estimated time for the crime to take place as a future scope. Along with this, one can try to predict the location of the crime. We will test the accuracy of frequent-itemsets and prediction based on different test sets. So the system will automatically learn the changing patterns in crime by examining the crime patterns. Also the crime factors change over time. By shifting through the crime data we have to identify new factors that lead to crime. Since we are considering only some limited factors full accuracy cannot be achieved. For getting better results in prediction we have to find more crime attributes.</p>
+  </div>
+
+
+</body>
+</html>

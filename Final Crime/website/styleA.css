@@ -1,0 +1,51 @@
+nav{
+	max-width:100%;
+	margin:0;
+	padding:0;
+}
+nav ul{
+	list-style:none;
+	float:right;
+	display:inline;
+
+}
+nav ul li{
+	float:left;
+}
+nav ul li:hover > ul {
+		display: block;
+	}
+nav ul:after {
+		content: ""; clear: both; display: block;
+	}
+nav ul li a{
+	display: block;
+	font-size: 3.4vh;
+	font-style: serif;
+	color:black;
+	padding: 2vh 2vh 2vh 2vh;
+}
+nav ul li a:hover{
+	background-color: #474747;
+	color:white;
+}
+nav ul ul{
+	display: none;
+	position: absolute;
+}
+nav ul ul li{
+	position: relative;
+	float:none;
+	align-content: left;
+}
+nav ul ul li a{
+	font-size: 3.2vh;
+	font-style: serif;
+	color:white;
+	padding: 1vh 3vh 1vh 2vh;
+	background-color: #474747;
+
+}
+nav ul ul li a:hover{
+	background-color: #696969;
+}
